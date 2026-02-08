@@ -1,4 +1,4 @@
-# 🍽️ FreshBot: A RAG App with Firestore & Gemini 2.0
+# FreshBot: A RAG App with Firestore & Gemini 2.0
 
 ![FreshBot Banner](https://user-images.githubusercontent.com/placeholder/banner.png)
 
@@ -18,7 +18,7 @@ This repo is designed to take a beginner **step-by-step**, from PDF ingestion to
 
 ---
 
-## 🔧 Prerequisites
+##  Prerequisites
 
 Before starting, make sure you have:
 
@@ -29,7 +29,7 @@ Before starting, make sure you have:
 
 ---
 
-## 📦 Repository Structure
+##  Repository Structure
 
 ```
 rag-food-safety-bot/
@@ -54,7 +54,7 @@ rag-food-safety-bot/
 
 ---
 
-## 📌 Phase 1: Load & Chunk PDF (Tasks 1 & 2)
+##  Phase 1: Load & Chunk PDF (Tasks 1 & 2)
 
 FreshBot uses a **food safety manual PDF** as its knowledge base.  
 We first load it, clean the text, and split it into chunks for embedding.
@@ -105,11 +105,11 @@ for doc in chunks:
     collection.add({"content": doc.page_content, "embedding": Vector(embedding)})
 ```
 
-> ✅ Now your Firestore database contains vectorized chunks for semantic search.
+>  Now your Firestore database contains vectorized chunks for semantic search.
 
 ---
 
-## 🗄️ Phase 2: Firestore Vector Index (Task 3)
+## Phase 2: Firestore Vector Index (Task 3)
 
 To search vectors efficiently, create a **vector index**:
 
@@ -125,7 +125,7 @@ gcloud firestore indexes composite create \
 
 ---
 
-## ☁️ Phase 3: Flask App Deployment (Task 4)
+## Phase 3: Flask App Deployment (Task 4)
 
 FreshBot uses **Flask** to serve the web app.  
 
@@ -153,7 +153,7 @@ Preview app:
 
 ---
 
-## 🐳 Docker & Cloud Run
+## Docker & Cloud Run
 
 ### Step 1: Set Artifact Registry
 
@@ -181,7 +181,7 @@ Visit the URL and test the app!
 
 ---
 
-## 🧩 How FreshBot Works (RAG Explained)
+## How FreshBot Works (RAG Explained)
 
 1. **User asks a question** → Flask receives input  
 2. **Query embedding** → Convert question into a vector using VertexAI  
@@ -193,7 +193,7 @@ Visit the URL and test the app!
 
 ---
 
-## ⚡ Tips for Beginners
+## Tips for Beginners
 
 - Firestore Native Mode = document-based NoSQL database  
 - Vector embeddings = numeric representations of text  
@@ -202,7 +202,7 @@ Visit the URL and test the app!
 
 ---
 
-## 🏆 Final Test
+## Final Test
 
 Ask:
 
@@ -214,7 +214,7 @@ Expected response:
 
 ---
 
-## 💡 References
+## References
 
 - [Vertex AI Documentation](https://cloud.google.com/vertex-ai/docs)  
 - [Firestore Vector Search](https://cloud.google.com/firestore/docs/solutions/vector-search)  
