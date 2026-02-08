@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config.title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f8ff; }
-        h1 { color: #1a73e8; }
-        form { margin-top: 20px; }
-        input[type=text] { width: 70%; padding: 10px; }
-        input[type=submit] { padding: 10px 20px; }
-        .response { margin-top: 20px; padding: 15px; border-radius: 8px; background-color: #e0f7fa; }
+        .container { padding: 50px; }
+        .response-box { margin-top: 20px; padding: 20px; background: #f4f4f4; border-radius: 8px; }
     </style>
 </head>
 <body>
-    <h1>{{ config.title }}</h1>
-    <h3>{{ config.subtitle }}</h3>
-    <form method="POST">
-        <input type="text" name="input" placeholder="Ask a food safety question" value="{{ config.input }}">
-        <input type="submit" value="Ask">
-    </form>
-    <div class="response">
-        <strong>FreshBot:</strong> {{ config.message }}
+    <div class="container">
+        <h1>{{ config.botname }}</h1>
+        <form action="/" method="post">
+            <div class="mdl-textfield mdl-js-textfield" style="width:100%">
+                <input class="mdl-textfield__input" type="text" name="input" id="input" value="{{ config.input }}">
+                <label class="mdl-textfield__label" for="input">Ask a food safety question...</label>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Ask</button>
+        </form>
+        <div class="response-box">
+            <strong>FreshBot:</strong> <p>{{ config.message }}</p>
+        </div>
     </div>
 </body>
 </html>
