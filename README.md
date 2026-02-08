@@ -222,9 +222,7 @@ Expected response:
 - [Gemini 2.0 Flash](https://cloud.google.com/vertex-ai/docs/generative-ai/gemini-overview)
 
 ---
-
 ```
-```
-
+THOLUMUZI KUBONI
 ```
 
